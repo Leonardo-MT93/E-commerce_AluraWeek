@@ -1,0 +1,80 @@
+  .header_principal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 4.875rem;
+        background-color: #FFFFFF;
+        position: static;
+        left: 0px;
+        top: 0px;
+        display: flex;
+    }
+    .logo_aluraweek{
+        position: static;
+        width: 6.25rem;
+        height: 1.75rem;
+        padding-left: 1rem;
+    }
+    .logo_buscar{
+        width: 1.065625rem;
+        height: 1.065625rem;
+        padding-right: 1rem;
+    }
+    .boton_login{
+        width: 8.3125rem;
+        height: 2.5rem;
+        padding: 0.75rem 1rem;
+        border: 1px solid #2A7AE4;
+        box-sizing: border-box;
+    }
+    .portada_principal{
+        position: relative;
+        display: inline-block;
+    }
+    .imagen_portada{
+        position: fixed;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%);
+    } 
+    .contenido_portada{
+        width: 85vw;
+        height: 13vh;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin-top: 24vw;
+        padding-left: 3.5vw;
+        padding-right: 3.5vw;
+    }
+    .titulo_portada{
+        font-family: 'Raleway', sans-serif;
+        color: #FFFFFF;
+        font-size: 7vw;
+    }
+    .subtitulo_portada{
+        font-family: 'Raleway';
+        color: #FFFFFF;
+        font-weight: 550;
+        font-size: 3.5vw;
+        padding-top: 10px;
+    }
+    .boton_portada{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 10px;
+        background: #2A7AE4;
+        margin-top: 0.5rem;
+        margin-bottom: 20px;
+        color: white;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 14px;
+        width: 118px;
+        height: 50px;
+    }
+
