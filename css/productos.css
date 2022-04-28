@@ -59,3 +59,25 @@
     line-height: 19px;
     padding: 8px 0px;
 }
+@media screen and (min-width: 601px) and (max-width:800px) {
+    .productos_aluraweek{
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        padding: 4% 3% 0% 3%;
+    }
+    .ordenar_productos{
+        padding-bottom: 4%;
+    }
+}
+@media screen and (min-width:801px){
+    .productos_aluraweek{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding: 4% 10% 0% 10%;
+    }
+    .ordenar_productos{
+        padding-bottom: 4%;
+    }
+}
