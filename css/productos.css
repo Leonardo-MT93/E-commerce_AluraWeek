@@ -36,10 +36,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.producto_starwars{
+.producto_individual{
     width: 156px;
     height: 249px;
-    margin: 5px 0px;
+    margin: 8px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
