@@ -1,0 +1,112 @@
+.todos_los_productos{
+    width: 100%;
+    height: auto;
+    background-color: #E5E5E5;;
+}
+.tarjeta_individual{
+    width: 140px;
+    height: 245px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.imagen_producto_contenido{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.contenedor{
+    width: 140px;
+    height: 170px;
+}
+.titulo_todos_productos{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    height: 82px;
+    padding: 4%;
+    justify-content: space-between;
+}
+.texto_todos_productos{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    color: #464646;
+}
+.boton_agregar_producto{
+    width: 150px;
+    height: 40px;
+    background: #2A7AE4;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+@media  screen and (min-width: 601px) and (max-width:800px) {
+    .tarjeta_individual{
+        width: 164px;
+        height: 245px;
+    }
+    .imagen_producto_contenido{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .contenedor{
+        width: 164px;
+        height: 170px;
+    }
+    .titulo_todos_productos{
+        display: flex;
+        flex-direction: row;
+        width: 92%;
+        height: 40px;
+        padding: 4% 4% 0 4%;
+        justify-content: space-between;
+    }
+    .ordenar_productos{
+        padding-bottom: 0%;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .tarjeta_individual{
+        width: 176px;
+        height: 245px;
+        margin-bottom: 40px;
+    }
+    .contenedor{
+        width: 176px;
+        height: 170px;
+    }
+    .ordenar_productos{
+        padding-bottom: 0%;
+    }
+
+    .titulo_todos_productos{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 51px;
+        padding: 4% 10% 0 10%;
+        justify-content: space-between;
+    }
+    .texto_todos_productos{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        color: #464646;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .boton_agregar_producto{
+        width: 163px;
+        height: 51px;
+        font-size: 16px;
+    }
+
+}
