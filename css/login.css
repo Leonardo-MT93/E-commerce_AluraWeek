@@ -1,0 +1,65 @@
+.interfaz_login{
+    width: 100%;
+    height: 362px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario_login{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 90px 10% 50px 10%;
+    justify-content: space-around;
+}
+.input_login{
+    width: 275px;
+    height: 41px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    text-align: start;
+}
+.boton_login_ppal{   
+    width: 109px;
+    height: 40px;
+    background: #2A7AE4;
+    color: #FFFFFF;
+}
+.texto_login_ppal{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+@media screen and (min-width: 801px) {
+    .interfaz_login{
+        height: 410px;
+    }
+    .formulario_login{
+        height: 291px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 423px;
+        margin: 70px 0 50px 0;
+        justify-content: space-evenly;
+    }   
+    .input_login{
+        width: 415px;
+        height: 63px;
+    }
+    .boton_login_ppal{   
+        width: 423px;
+        height: 62px;
+        background: #2A7AE4;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
+    .texto_login_ppal{
+        font-size: 20px;
+    }
+}
