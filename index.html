@@ -20,8 +20,8 @@
 <body>
   <header class="header">
       <ul class="header_principal">
-        <img src="img/Logo.svg" alt="Logo de AluraWeek" class="logo_aluraweek">
-        <img src="img/Logologo_desktop.svg" alt="Logo AluraWeek" class="logo_aluraweek_desktop">
+        <img src="img/Logo.svg" alt="Logo de AluraWeek" class="logo_aluraweek"  href="index.html">
+        <img src="img/Logologo_desktop.svg" alt="Logo AluraWeek" class="logo_aluraweek_desktop" href="index.html">
         <div class="invertir_orden">
           <button class="boton_login">Login</button>
           <input type="search" class="barra_busqueda" id="busqueda" placeholder="¿Que desea buscar?">
@@ -86,7 +86,7 @@
                </div>
             </ul>
         </section>
-        <section class="producto_consolas">
+        <section class="producto_consolas" id="consolas">
           <ul class="seccion_consola">
             <div class="lista_seccion">
               <p class="titulo_seccion">Consolas</p>
@@ -133,7 +133,7 @@
         <section class="producto_diversos">
           <ul class="seccion_consola">
             <div class="lista_seccion">
-              <p class="titulo_seccion">Consolas</p>
+              <p class="titulo_seccion">Diversos</p>
               <a href="#" class="sublink">Ver todo &#x2192</a>
             </div> 
             <div>
@@ -191,8 +191,10 @@
         </div>
         <form action="#" class="formulario">
           <p class="titulo_formulario">Hable con nosotros</p>
-          <input type="text" placeholder="Nombre:" class="input_nombre">
-          <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="Escribe tu mensaje" class="mensaje_form"></textarea>
+          <input type="text" placeholder="Nombre:" class="input_nombre" pattern="^[A-Za-z ]{5,40}$" required data-tipo="nombre" maxlength="40">
+          <span class="error_nombre">error</span>
+          <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="Escribe tu mensaje" class="mensaje_form" required maxlength="120" data-tipo="mensaje"></textarea>
+          <span class="error_mensaje">error</span>
           <button class="boton_enviar">Enviar mensaje</button>
         </form>
       </section>
@@ -202,5 +204,6 @@
       <p class="texto_footer">Desarrollado por Tolaba Leonardo - 2021</p>
     </div>
   </footer>  
+  <script src="js/principal.js"></script>
 </body>
 </html>

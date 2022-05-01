@@ -24,7 +24,7 @@
         <img src="img/Logologo_desktop.svg" alt="Logo AluraWeek" class="logo_aluraweek_desktop">
         <div class="invertir_orden">
         <button class="boton_login">Login</button>
-        <input type="search" class="barra_busqueda" id="busqueda" placeholder="¿Que desea buscar?">
+        <input type="search" class="barra_busqueda" id="busqueda" placeholder="¿Que desea buscar?" data-tipo="busqueda">
         <a href="#busqueda" class="busqueda_responsive">
             <img src="img/Icone.svg" alt="Icono de Buscar" class="logo_buscar">
         </a>
@@ -36,8 +36,10 @@
         <div>
             <form action="#" class="formulario_login">
                 <p class="texto_login_ppal">Iniciar Sesión</p>
-                <input type="text" class="input_login" placeholder="Escriba su correo electrónico" required>
-                <input type="text" class="input_login" placeholder="Escriba su contraseña" required>
+                <input type="mail" class="input_login" placeholder="Escriba su correo electrónico" required pattern="^[A-Za-z.-_\d]+@[a-z/d.-]+.com" data-tipo="email" autocomplete="off">
+                <span class="error_mail">error</span>
+                <input type="password" id="contraseña" class="input_login" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679"  required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}$" data-tipo="contraseña" >
+                <span class="error_contraseña">error</span>
                 <button class="boton_login_ppal">Entrar</button>
             </form>
         </div>
@@ -58,8 +60,10 @@
         </div>
         <form action="#" class="formulario">
         <p class="titulo_formulario">Hable con nosotros</p>
-        <input type="text" placeholder="Nombre:" class="input_nombre">
-        <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="Escribe tu mensaje" class="mensaje_form"></textarea>
+        <input type="text" placeholder="Nombre:" class="input_nombre" data-tipo="nombre" pattern="^[A-Za-z ]{5,40}$" required>
+        <span class="error_nombre">error</span>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="Escribe tu mensaje" class="mensaje_form" data-tipo="mensaje" required></textarea>
+        <span class="error_mensaje">error</span>
         <button class="boton_enviar">Enviar mensaje</button>
         </form>
     </section>
@@ -69,5 +73,6 @@
     <p class="texto_footer">Desarrollado por Tolaba Leonardo - 2021</p>
     </div>
     </footer>  
+    <script src="js/validacion_login.js"></script>
     </body>
     </html>
