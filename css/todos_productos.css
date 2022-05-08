@@ -72,16 +72,21 @@
 }
 
 @media screen and (min-width: 801px) {
+    .productos_aluraweek{
+        padding: 4% 10% 2% 10%;
+    }
     .tarjeta_individual{
         width: 176px;
         height: 245px;
-        margin-bottom: 40px;
+        margin: 10px;
     }
     .contenedor{
         width: 176px;
         height: 170px;
     }
     .ordenar_productos{
+        display: flex;
+        flex-wrap: wrap;
         padding-bottom: 0%;
     }
 

@@ -8,6 +8,8 @@ redireccionarLogin.addEventListener('click', (evento) => {
     window.location.href = ('./login.html');
 });
 
+
+
 //DIRECCIONAMIENTO VALIDO SOLO PARA INDEX.HTML
 
 const redireccionarBotonConsolas = document.querySelector('.boton_portada');

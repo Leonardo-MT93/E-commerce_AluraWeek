@@ -1,0 +1,238 @@
+Secciones pAra HTML
+
+
+        <section >
+            <ul class="seccion_starwars">
+               <div class="lista_seccion">
+                 <p class="titulo_seccion titulo_starwars">Star Wars</p>
+                 <a href="productos.html" class="sublink">Ver todo &#x2192</a>
+               </div> 
+               <div>
+                  <ul class="ordenar_productos ordenar_productos_SW">
+                    <div class="producto_individual producto_individual_SW">
+                        <img class="imagen_producto imagen_SW" src="img/productos/unsplash_6FDXGY9J6y4SW_1.svg" alt="">
+                        <ul>
+                          <p class="nombre_producto nombre_SW">Producto XYZ</p>
+                          <p class="precio_producto precio_SW">R$ 60,00</p>
+                          <a href="#" class="sublink">Ver producto</a>
+                        </ul> 
+                    </div>
+                    <div class="producto_individual producto_individual_SW">
+                        <img class="imagen_producto imagen_SW" src="img/productos/unsplash_epRFE_hBNjoSW_2.svg" alt="">
+                        <ul>
+                          <p class="nombre_producto nombre_SW">Producto XYZ</p>
+                          <p class="precio_producto precio_SW">R$ 60,00</p>
+                          <a href="#" class="sublink">Ver producto</a>
+                        </ul> 
+                    </div>
+                    <div class="producto_individual producto_individual_SW">
+                        <img class="imagen_producto imagen_SW" src="img/productos/unsplash_KeGToDVN0l4SW_3.svg" alt="">
+                        <ul>
+                          <p class="nombre_producto nombre_SW">Producto XYZ</p>
+                          <p class="precio_producto precio_SW">R$ 60,00</p>
+                          <a href="#" class="sublink">Ver producto</a>
+                        </ul> 
+                    </div>
+                    <div class="producto_individual producto_individual_SW">
+                      <img class="imagen_producto imagen_SW" src="img/productos/unsplash_4OHkK555s1ASW_4.svg" alt="">
+                      <ul>
+                        <p class="nombre_producto nombre_SW">Producto ZZZ</p>
+                        <p class="precio_producto precio_SW">R$ 20,00</p>
+                        <a href="#" class="sublink">Ver producto</a>
+                      </ul> 
+                    </div>
+                    
+                  </ul>
+               </div>
+            </ul>
+        </section>
+        <section class="producto_consolas" id="consolas">
+          <ul class="seccion_consola">
+            <div class="lista_seccion">
+              <p class="titulo_seccion titulo_consolas">Consolas</p>
+              <a  href="productos.html" class="sublink">Ver todo &#x2192</a>
+            </div> 
+            <div>
+              <ul class="ordenar_productos ordenar_productos_consola">
+                <div class="producto_individual producto_individual_consola">
+                    <img class="imagen_producto imagen_consola" src="img/productos/unsplash_0POwK6iAiRQC_1.svg" alt="">
+                    <ul>
+                      <p class="nombre_producto nombre_consola">Producto XYZ</p>
+                      <p class="precio_producto precio_consola">R$ 60,00</p>
+                      <a href="#" class="sublink">Ver producto</a>
+                    </ul> 
+                </div>
+                <div class="producto_individual producto_individual_consola">
+                    <img class="imagen_producto imagen_consola" src="img/productos/unsplash_caNzzoxls8QC_2.svg" alt="">
+                    <ul>
+                      <p class="nombre_producto nombre_consola">Producto XYZ</p>
+                      <p class="precio_producto precio_consola">R$ 60,00</p>
+                      <a href="#" class="sublink">Ver producto</a>
+                    </ul> 
+                </div>
+                <div class="producto_individual producto_individual_consola">
+                    <img class="imagen_producto imagen_consola" src="img/productos/unsplash_ZV7lnfyQLmAC_3.svg" alt="">
+                    <ul>
+                      <p class="nombre_producto nombre_consola">Producto XYZ</p>
+                      <p class="precio_producto precio_consola">R$ 60,00</p>
+                      <a href="#" class="sublink">Ver producto</a>
+                    </ul> 
+                </div>
+                <div class="producto_individual producto_individual_consola">
+                  <img class="imagen_producto imagen_consola" src="img/productos/unsplash_wa5z9o9fgjwC_4.svg" alt="">
+                  <ul>
+                    <p class="nombre_producto nombre_consola">Producto XYZ</p>
+                    <p class="precio_producto precio_consola">R$ 60,00</p>
+                    <a href="#" class="sublink">Ver producto</a>
+                  </ul> 
+                </div>            
+              </ul>
+           </div>
+         </ul>
+        </section>
+        <section class="producto_diversos">
+          <ul class="seccion_consola">
+            <div class="lista_seccion">
+              <p class="titulo_seccion titulo_diversos">Diversos</p>
+              <a href="productos.html" class="sublink">Ver todo &#x2192</a>
+            </div> 
+            <div>
+              <ul class="ordenar_productos ordenar_productos_diversos">
+                <div class="producto_individual producto_individual_diversos">
+                    <img class="imagen_producto imagen_diversos" src="img/productos/unsplash_fMP-oCze3AYD_1.svg" alt="">
+                    <ul>
+                      <p class="nombre_producto nombre_diversos">Producto XYZ</p>
+                      <p class="precio_producto precio_diversos">R$ 60,00</p>
+                      <a href="#" class="sublink">Ver producto</a>
+                    </ul> 
+                </div>
+                <div class="producto_individual producto_individual_diversos">
+                    <img class="imagen_producto imagen_diversos" src="img/productos/unsplash_bUgaIaZysH0D_2.svg" alt="">
+                    <ul>
+                      <p class="nombre_producto nombre_diversos">Producto XYZ</p>
+                      <p class="precio_producto precio_diversos">R$ 60,00</p>
+                      <a href="#" class="sublink">Ver producto</a>
+                    </ul> 
+                </div>
+                <div class="producto_individual producto_individual_diversos">
+                    <img class="imagen_producto imagen_diversos" src="img/productos/unsplash_sYVY_ZKwaxUD_3.svg" alt="">
+                    <ul>
+                      <p class="nombre_producto nombre_diversos">Producto XYZ</p>
+                      <p class="precio_producto precio_diversos">R$ 60,00</p>
+                      <a href="#" class="sublink">Ver producto</a>
+                    </ul> 
+                </div>
+                <div class="producto_individual producto_individual_diversos">
+                  <img class="imagen_producto imagen_diversos" src="img/productos/unsplash_jMT6BrgBuXUD_4.svg" alt="">
+                  <ul>
+                    <p class="nombre_producto nombre_diversos">Producto POKEMON</p>
+                    <p class="precio_producto precio_diversos">R$ 35,00</p>
+                    <a href="#" class="sublink">Ver producto</a>
+                  </ul> 
+                </div>            
+              </ul>
+           </div>
+         </ul>
+        </section>
+
+
+        JSON DEFAULT
+
+        {
+  "profile": [
+    {  
+      "Seccion": "Star Wars",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_6FDXGY9J6y4SW_1.svg",      
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-4520"
+    },
+    {
+      "Seccion": "Star Wars",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_epRFE_hBNjoSW_2.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-4469"
+    },
+    {
+      "Seccion": "Star Wars",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_KeGToDVN0l4SW_3.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-1539"
+    },
+    {
+      "Seccion": "Star Wars",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_4OHkK555s1ASW_4.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-1531"
+    },    {  
+      "Seccion": "Consolas",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_0POwK6iAiRQC_1.svg",      
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-4523"
+    },
+    {
+      "Seccion": "Consolas",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_caNzzoxls8QC_2.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-4423"
+    },
+    {
+      "Seccion": "Consolas",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_ZV7lnfyQLmAC_3.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-1523"
+    },
+    {
+      "Seccion": "Consolas",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_wa5z9o9fgjwC_4.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-1512"
+    },    {  
+      "Seccion": "Diversos",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_fMP-oCze3AYD_1.svg",      
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-4123"
+    },
+    {
+      "Seccion": "Diversos",
+      "Imagen": 	"http://127.0.0.1:5500/img/productos/unsplash_bUgaIaZysH0D_2.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-4123"
+    },
+    {
+      "Seccion": "Diversos",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_sYVY_ZKwaxUD_3.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-1123"
+    },
+    {
+      "Seccion": "Diversos",
+      "Imagen": "http://127.0.0.1:5500/img/productos/unsplash_jMT6BrgBuXUD_4.svg",
+      "Product": "PRODUCT",
+      "Price": "$35000",
+      "Desc": "sadasdasd",
+      "id": "Producto-1234"
+    }
+  ]
+}

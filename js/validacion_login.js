@@ -1,3 +1,46 @@
+let usuarioLogueado = false;
+const iniciarSesion = document.querySelector('.boton_login_ppal');
+iniciarSesion.addEventListener('click', (evento) => {
+    evento.preventDefault();
+    const validUser = "leonino@alura.com"
+    const validPass = "Alura2022**"
+    const user = document.querySelector('.input_login').value;
+    const pass = document.querySelector('#contraseña').value;
+    let control = false;
+    if(validUser == user && validPass == pass){
+        alert('Inicio de sesion Exitoso');
+        control = true;
+        window.location.href = ('../index.html'); 
+    }else{
+        alert('Usuario o contraseña incorrectos. Reingrese usuario y contraseña')
+    }
+       
+    
+    
+})
+if(control){
+    usuarioLogueado = true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const spanInicial = document.querySelectorAll('span');
 spanInicial.forEach((span) => {
     span.innerHTML = "";
@@ -64,3 +107,5 @@ const tipoDeErrores = [
     "patternMismatch",
     "customError",
 ];
+
+export default usuarioLogueado;

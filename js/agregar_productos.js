@@ -1,87 +1,51 @@
-import { crearProducto } from "./productos_total.js"; 
-
+import { funcionesTarjeta } from "./controladores.js";
 const submit = document.querySelector('.boton_agregar_producto');
-submit.addEventListener('click', (evento) => {
-    evento.preventDefault();
-    const newSeccion = document.querySelector('.selector_opciones').value;
-    const newImagen = document.querySelector('#newImage').src;
-    const newProduct = document.querySelector('#newProduct').value;
-    const newPrice = document.querySelector('#newPrice').value;
-    const newDesc = document.querySelector('#descripcion_producto').value;
-    const id = `Producto-${Math.floor(Math.random()*5000)}`; // Genera id aleatorios para la imagen procesada
-    const divTarjeta = document.createElement('div');
-    const divContenedor = document.createElement('div');
-    const lista = document.createElement('ul');
-    const pNombre = document.createElement('p');
-    const pPrecio = document.createElement('p');
-    const pId = document.createElement('p');
-    // console.log(newImagen);
-    // pNombre.innerHTML = newProduct;
-    // pNombre.classList.add("nombre_producto");
-    // pPrecio.innerHTML = newPrice;
-    // pPrecio.classList.add("precio_producto");
-    // pId.innerHTML = id;
-    // pId.classList.add("id_producto");
 
-    // lista.appendChild(pNombre);
-    // lista.appendChild(pPrecio);
-    // lista.appendChild(pId);
-    // newImagen.classList.remove("imagen_responsive");
-    // newImagen.classList.add("imagen_producto_contenido");
-    // divContenedor.appendChild(newImagen);
-    // divContenedor.classList.add("contenedor")
-    // divTarjeta.appendChild(divContenedor);
-    // divTarjeta.appendChild(lista);
-    // divTarjeta.classList.add("tarjeta_individual");
 
-    // const ListaTotalProductos = document.querySelector('.ordenar_productos');
-    // ListaTotalProductos.appendChild(divTarjeta);
-    // console.log(ListaTotalProductos);
+const url = new URL (window.location);
+const id = url.searchParams.get("id");
 
-        const prodObj = {
-            newSeccion,
-            newImagen,
-            newProduct,
-            newPrice,
-            newDesc,
-            id
-        }
-        crearProducto(prodObj);
-        const ListaProductosTotales = JSON.parse(localStorage.getItem("producto")) || [];
-        ListaProductosTotales.push(prodObj);
-        localStorage.setItem("producto", JSON.stringify(ListaProductosTotales));  
-        window.location.href = ('../agregar_producto.html');
-    
+if(id === null){
+    submit.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        const Seccion = document.querySelector('.selector_opciones').value;
+        const Imagen = document.querySelector('#newImage').src;
+        const Product = document.querySelector('#newProduct').value;
+        const Price = document.querySelector('#newPrice').value;
+        const Desc = document.querySelector('#descripcion_producto').value;
+        const id = `Producto-${Math.floor(Math.random()*5000)}`; // Genera id aleatorios para la imagen procesada
+            funcionesTarjeta.crearTarjeta(Seccion, Imagen, Product, Price, Desc, id).then((respuesta) => {
+                window.location.href = ('../agregar_producto.html');
+            })
+    })
+}else{
+    funcionesTarjeta.buscarTarjeta(id).then((profile) => {
+    reemplazarDesc(profile.Imagen, profile.Product, profile.Price, profile.Desc);
+    submit.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        const Seccion = document.querySelector('.selector_opciones').value;
+        const Imagen = document.querySelector('.imagen_responsive').src;
+        const Product = document.querySelector('#newProduct').value;
+        const Price = document.querySelector('#newPrice').value;
+        const Desc = document.querySelector('#descripcion_producto').value;
+        console.log(Imagen)
+            funcionesTarjeta.actualizarTarjeta(Seccion, Imagen, Product, Price, Desc, id).then((respuesta) => {
+                window.location.href = ('../agregar_producto.html');
+            })
+    })
     
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function reemplazarDesc(imagen, nombre, precio, descripcion){
+    const imagenDesc = document.querySelector('.imagen_responsive');
+    const nombreDesc = document.querySelector('#newProduct');
+    const precioDesc = document.querySelector('#newPrice');
+    const Desc = document.querySelector('#descripcion_producto');
+    imagenDesc.src = imagen;
+    nombreDesc.value = nombre;
+    precioDesc.value = precio;
+    Desc.innerHTML = descripcion;
+}
+}
 
 
 

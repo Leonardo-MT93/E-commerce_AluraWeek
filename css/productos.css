@@ -81,4 +81,9 @@
     .ordenar_productos{
         padding-bottom: 4%;
     }
+    .imagen_producto{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
