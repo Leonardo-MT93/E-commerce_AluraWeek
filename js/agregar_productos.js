@@ -9,7 +9,7 @@ if(id === null){
     submit.addEventListener('click', (evento) => {
         evento.preventDefault();
         const Seccion = document.querySelector('.selector_opciones').value;
-        const Imagen = document.querySelector('#newImage').src;
+        const Imagen = document.querySelector('.imagen_responsive').src;
         const Product = document.querySelector('#newProduct').value;
         const Price = document.querySelector('#newPrice').value;
         const Desc = document.querySelector('#descripcion_producto').value;
@@ -30,7 +30,7 @@ if(id === null){
         const Desc = document.querySelector('#descripcion_producto').value;
         console.log(Imagen)
             funcionesTarjeta.actualizarTarjeta(Seccion, Imagen, Product, Price, Desc, id).then((respuesta) => {
-                window.location.href = ('../agregar_producto.html');
+                window.location.href = ('../index.html');
             })
     })
     
@@ -61,7 +61,6 @@ const inputBuscar = document.querySelector('.input_file');
 const file = document.querySelector('.input_file').files[0];
 inputBuscar.addEventListener('change', (evento) => {
     evento.preventDefault();
-    console.log(file);
     cargarImagen();
 })
 function cargarImagen(){
@@ -92,7 +91,7 @@ areaImagen.addEventListener('drop', (event) => {
 
 function processFile(file){
     const docType = file[0].type;
-    const validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
+    const validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/svg'];
     if(validExtensions.includes(docType)){
         const fileReader = new FileReader(); // Tipo Objeto = nos permite obtener las propiedades por ej su nombre, y asi podes realizarfunciones sobre eso
         const id = `file-${Math.random().toString(32).substring(7)}`; // Genera id aleatorios para la imagen procesada
