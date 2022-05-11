@@ -31,6 +31,7 @@ const actualizarTarjeta = (Seccion, Imagen, Product, Price, Desc, id) => {
 }
 
 
+
  export const funcionesTarjeta = {
     crearTarjeta,
     listaTarjetas,
