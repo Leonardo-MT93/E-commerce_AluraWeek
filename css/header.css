@@ -97,6 +97,7 @@
         display: none;
         visibility: hidden;
     }
+
     @media screen and (max-width: 800px) and (min-width: 601px) {
         .logo_aluraweek_desktop{
             display: none;
@@ -187,8 +188,13 @@
             background-color: #FFFFFF;
             margin: 0 10%;
         }
+        .contenedor_busqueda{
+            position: relative;
+            width: 272px;
+            
+        }
         .barra_busqueda{
-            position: static;
+            position: inherit;
             width: 272px;
             height: 40px;
             left: calc(50% - 272px/2 + 66px);
@@ -202,6 +208,23 @@
             background-position-x: 230px;
             padding: 12px 45px 12px 16px;
         }
+        .lista_coincidencias{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 272px;
+            height: auto;
+            z-index: 100;
+        }
+
+        .coincidencia{
+            position: absolute;
+            z-index: 100;
+            width: 272px;
+            border: 1px solid gray ;
+            height: 25px;
+        }
+
         .invertir_orden{
             display: flex;
             width: 80%;

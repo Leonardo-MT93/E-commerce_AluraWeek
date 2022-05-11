@@ -24,6 +24,6 @@ editar.addEventListener('click', (evento) => {
 const eliminar = document.querySelector('.boton_eliminar');
 eliminar.addEventListener('click', (evento) => {
     funcionesTarjeta.eliminarTarjeta(id).then((respuesta) => {
-        window.location.href = ('./index.html');
+        window.location.href = ('./delete_Success.html');
     }).catch((error) => 'Ocurrio un error')
 })

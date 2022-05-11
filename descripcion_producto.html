@@ -36,11 +36,25 @@
         <div class="descripcion_total">
             <section class="producto_seleccionado">
                 <div class="info_producto">
-                    <img src="" alt="" class="imagen_producto_desc">
+                    <div class="contenedor_imagen_items">
+                        <div class="contenedor_imagen">
+                            <img src="" alt="" class="imagen_producto_desc">
+                        </div>
+                        <div class="contenedor_items">
+                            <label for="boton_eliminar" class="botones_eliminar_editar">
+                                <img src="img/delete.png" alt="boton de eliminar"  class="botones_items">
+                            </label>
+                            <label for="boton_editar" class="botones_eliminar_editar">
+                                <img src="img/edit.png" alt="boton para editar" class="botones_items">
+                            </label>
+                            <button id="boton_eliminar" class="boton_eliminar">Eliminar</button>
+                            <button id="boton_editar" class="boton_editar">Editar</button>
+                        </div>
+                    </div>
+                    
                     <ul class="detalle_producto">
                         <p class="nombre_producto_desc">Producto XYZ</p>
-                        <button class="boton_eliminar">Eliminar</button>
-                        <button class="boton_editar">Editar</button>
+                        
                         <p class="precio_producto_desc">$60,00</p>
                         <p class="descripcion_producto"></p>
                     </ul>

@@ -1,0 +1,40 @@
+.add_product_sucess{
+    display: flex;
+    justify-content: center;
+    background-color: #e5e5e5;
+}
+.contenedor_mensaje{
+    margin: 10% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 650px;
+    height: 300px;
+    background-color: #c4c4bc;
+    border-color: #2A7AE4;
+    border-radius:55px;
+}
+
+.titulo_mensaje{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+.boton_mensaje_alert{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 10px;
+    background: #2A7AE4;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 17px;
+    width: 145px;
+    height: 65px;
+}

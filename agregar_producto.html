@@ -34,37 +34,42 @@
   </header>
   <main class="main">
     <section class="agregar_producto">
-       <div class="seccion_agregar">
-           <p class="titulo_agregar">Agregar nuevo producto</p>
-           <div class="contenido_agregar_producto">
-            <img src="img/insert_photo_black_24dp 1agregar_producto.svg" alt="Imagen agregar producto" class="insertar_archivo">
-           </div>  
-       </div>
 
-       <div class="seccion_agregar_responsive">
-            <p class="titulo_agregar_responsive">Agregar nuevo producto</p>
-            <div class="agregar_responsive">
-                <div class="contenido_imagen_responsive">
-                    <img src="img/insert_photo_black_24dp 1agregar_responsive.svg" alt="Imagen responsive" class="imagen_responsive" id="Remove">
-                </div>
-                <p class="texto_intermedio">O</p>
-                <label class="boton_buscar">
-                  <input class="input_file" type="file" accept=".jpg, .jpeg, .png, .svg"/>
-                  Busque en su dispositivo
-              </label>              
-            </div>
-       </div>
 
 
        <div class="formulario_agregar">
-           <form action="#">
+           <form action="#" class="formulario_agregar">
+            <div class="seccion_agregar">
+              <p class="titulo_agregar">Agregar nuevo producto</p>
+              <div class="contenido_agregar_producto">
+                <label for="file-input">
+                  <img src="img/insert_photo_black_24dp 1agregar_producto.svg" alt="Imagen agregar producto" class="insertar_archivo">
+                </label>
+                <input id="file-input" class="input_file_responsive" type="file" accept=".jpg, .jpeg, .png, .svg"/>
+              </div>  
+          </div>
+   
+          <div class="seccion_agregar_responsive">
+               <p class="titulo_agregar_responsive">Agregar nuevo producto</p>
+               <div class="agregar_responsive">
+                   <div class="contenido_imagen_responsive">
+                       <img src="img/imagenDefault.svg" alt="Imagen responsive" class="imagen_responsive" id="Remove"> 
+                   </div>
+                   <p class="texto_intermedio">O</p>
+                   <label class="boton_buscar">
+                     <input class="input_file" type="file" accept=".jpg, .jpeg, .png, .svg"/>
+                     Busque en su dispositivo
+                 </label>         
+               </div>
+               <span class="error_imagen">error</span>  
+          </div>
                <div class="formulario_agregar_orden">
                 <select name="secciones disponibles" class="selector_opciones">
                   <option>Star Wars</option>
                   <option>Consolas</option>
                   <option selected>Diversos</option>
                   </select>
-                <input type="text" id="newProduct" class="input_agregar" placeholder="Nombre del producto" required pattern="^[A-Za-z áéíó.]{5,40}$" data-tipo="producto">
+                <input type="text" id="newProduct" class="input_agregar" placeholder="Nombre del producto" required pattern="^[A-Za-z áéíó.]{5,60}$" data-tipo="producto">
                 <span class="error_nombre">error</span>
                 <input type="text" name="" id="newPrice" class="input_agregar" placeholder="Precio del producto" required pattern="^[0-9,.$]{2,8}$" data-tipo="precio">
                 <span class="error_nombre">error</span>
