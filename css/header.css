@@ -193,36 +193,34 @@
             width: 272px;
             
         }
+        .contenedor_buscar{
+            position: relative;
+        }
+        .boton_buscar{
+            display: none;
+            position: absolute;
+        }
+        .logo_buscar_2{
+            position: absolute;
+            width: 35px;
+            height: 35px;
+        }
+        .imagen_boton_buscar{
+            position: absolute;
+            width: 35px;
+            height: 35px;
+        }
+        .imagen_boton_buscar:hover{
+            cursor: pointer;
+        }
         .barra_busqueda{
-            position: inherit;
             width: 272px;
             height: 40px;
             left: calc(50% - 272px/2 + 66px);
             top: 0px;
             background: #F5F5F5;
             border-radius: 20px;
-            background: url(../img/Iconeicono_busqueda.svg);
-            background-repeat: no-repeat;
-            background-position: right;
-            background-size: 24px;
-            background-position-x: 230px;
             padding: 12px 45px 12px 16px;
-        }
-        .lista_coincidencias{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            width: 272px;
-            height: auto;
-            z-index: 100;
-        }
-
-        .coincidencia{
-            position: absolute;
-            z-index: 100;
-            width: 272px;
-            border: 1px solid gray ;
-            height: 25px;
         }
 
         .invertir_orden{

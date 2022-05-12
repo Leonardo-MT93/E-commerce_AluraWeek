@@ -29,7 +29,19 @@ const actualizarTarjeta = (Seccion, Imagen, Product, Price, Desc, id) => {
     .then( respuesta => console.log(respuesta))
     .catch( error => console.log(error))
 }
-
+const resultadoBusqueda = (Seccion, Imagen, Product, Price, Desc, id) => {
+    return fetch('https://aluraweek.herokuapp.com/resultado', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({Seccion, Imagen, Product, Price, Desc, id})
+    })
+}
+const listaBusqueda = () => fetch("https://aluraweek.herokuapp.com/resultado").then(respuesta => respuesta.json());
+const eliminarBusqueda = (id) => {
+    return fetch(`https://aluraweek.herokuapp.com/resultado/${id}`, {
+        method: "DELETE"
+    });
+}
 
 
  export const funcionesTarjeta = {
@@ -38,4 +50,7 @@ const actualizarTarjeta = (Seccion, Imagen, Product, Price, Desc, id) => {
     eliminarTarjeta,
     buscarTarjeta,
     actualizarTarjeta,
+    resultadoBusqueda,
+    listaBusqueda,
+    eliminarBusqueda
 } 

@@ -1,34 +1,43 @@
 import { funcionesTarjeta } from "./controladores.js";
 
+// const estructura = document.querySelector('.ordenar_productos_total');
+// const ejemplo = document.querySelector('.tarjeta_individual_1')
 funcionesTarjeta.listaTarjetas()
 .then((respuesta) => {
     const arrayObj = respuesta;
     arrayObj.forEach((obj) => {
-        crearEtiquetaTotal(obj)
+        crearEtiquetaTotal(obj);
     })
-    const editar = document.querySelector('.boton_editar');
-editar.addEventListener('click', (evento) => {
-    console.log(evento.target)
+    const editar = document.querySelectorAll('.boton_editar');
+    editar.forEach((BotonEditar) => {
+        BotonEditar.addEventListener('click', botonTocado);
+    })
+//     const eliminar = document.querySelector('.boton_eliminar');
+// eliminar.addEventListener('click', (evento) => {
+//     console.log('ELIMINADO')
+//     funcionesTarjeta.eliminarTarjeta(id).then((respuesta) => {
+//         window.location.href = ('./delete_Success.html');
+//     }).catch((error) => 'Ocurrio un error')
+// })
+})
+
+function botonEditar(){
+    const editar = document.querySelectorAll('.boton_editar');
+    editar.forEach((BotonEditar) => {
+        BotonEditar.addEventListener('click', botonTocado);
+    })
+}
+
+function botonTocado(evento){
+    //Este console log me brinda el ID del elemento seleccionado
+    console.log(evento.target.parentNode.parentNode.parentNode.id);
     // window.location.href = 'agregar_producto.html?id='+id;
-})
-const eliminar = document.querySelector('.boton_eliminar');
-eliminar.addEventListener('click', (evento) => {
-    console.log('ELIMINADO')
-    // funcionesTarjeta.eliminarTarjeta(id).then((respuesta) => {
-    //     window.location.href = ('./delete_Success.html');
-    // }).catch((error) => 'Ocurrio un error')
-})
-})
-
-
-
+}       
 
 const botonAgregar = document.querySelector('.boton_agregar_producto');
 botonAgregar.addEventListener('click', (evento) => {
     window.location.href = ('./agregar_producto.html');
 });
-
-
 
 function crearEtiquetaTotal(obj){
     const ProductosTotales = document.querySelector('.ordenar_productos_total');
@@ -72,7 +81,6 @@ function crearEtiquetaTotal(obj){
     label2.classList.add('botones_eliminar_editar')
     label1.appendChild(deleteIcon);
     label2.appendChild(createIcon);
-    
     divIcon.appendChild(label1);
     divIcon.appendChild(label2);
     divIcon.appendChild(botonCreate);
@@ -80,14 +88,12 @@ function crearEtiquetaTotal(obj){
     divIcon.classList.add('div_icon')
     contenedor.appendChild(divIcon);
     contenedor.classList.add('contenedor');
-
-
     contenedor.appendChild(imagenProducto);
     tarjetaIndividual.appendChild(contenedor);
     tarjetaIndividual.appendChild(listaDatos);
+    tarjetaIndividual.id = obj.id;
     tarjetaIndividual.classList.add('tarjeta_individual');
     ProductosTotales.appendChild(tarjetaIndividual);
-
 }
 
 
