@@ -1,5 +1,8 @@
 import { funcionesTarjeta } from "./controladores.js";
+import { Session } from "../session/check_session.js";
 
+Session.comprobarUser();
+Session.redireccionamiento();
 const url = new URL (window.location);
 const id = url.searchParams.get("id");
 let contador = 0;
@@ -30,7 +33,6 @@ eliminar.addEventListener('click', (evento) => {
 })
 
 funcionesTarjeta.buscarTarjeta(id).then((respuesta)=> {
-    console.log(respuesta.Seccion);
     funcionesTarjeta.listaTarjetas().then((tarjetas) => {
         const arraySeccion = tarjetas;
         arraySeccion.forEach((objetos)=> {
@@ -39,6 +41,7 @@ funcionesTarjeta.buscarTarjeta(id).then((respuesta)=> {
             }else if(objetos.Seccion == respuesta.Seccion && id != objetos.id && screen.width<800 && contador<4){
                 crearEtiqueta(objetos);
                 contador++;
+                console.log(contador);
             }
         })
     })

@@ -1,10 +1,13 @@
 import { funcionesTarjeta } from "./controladores.js";
 
 const barraBusqueda = document.querySelector('.barra_busqueda');
+const barraBusquedaMobile = document.querySelector('.input_responsive');
+barraBusquedaMobile.value = "";
+barraBusqueda.value = "";
 let contador = 0;
-const buscar = document.querySelector('.boton_buscar');
-buscar.addEventListener('click', filtrar);
-function filtrar(){
+const buscar = document.querySelector('.logo_buscar_2');
+buscar.addEventListener('click', (event)=>{
+    event.preventDefault();
     const dato = barraBusqueda.value.toLowerCase();
     if(dato == ''){
         alert('No se introdujo ningún dato')
@@ -26,4 +29,11 @@ function filtrar(){
             })
         })
     } 
+});
+function pulsar(event){
+    if(e.keyCode === 13){
+        e.preventDefault();
+        console.log(barraBusquedaMobile.value)
+    }
 }
+

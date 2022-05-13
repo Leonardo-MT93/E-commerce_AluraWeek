@@ -23,18 +23,19 @@
         <img src="img/Logo.svg" alt="Logo de AluraWeek" class="logo_aluraweek"  href="index.html">
         <img src="img/Logologo_desktop.svg" alt="Logo AluraWeek" class="logo_aluraweek_desktop" href="index.html">
         <div class="invertir_orden">
-          <button class="boton_login">Login</button>
-          <div class="contenedor_buscar">
+          <button class="boton_login hidden">Login</button>
+          <div class="logged_on">
+            <p class="LOGUEADO"></p>
+            <a class="btn_loggedoff hidden" href="index.html">Salir</a>
+          </div>
+          <div class="contenedor_busqueda">
             <input type="search" class="barra_busqueda" id="busqueda" placeholder="¿Que desea buscar?">
-            <label for="boton_busqueda" class="imagen_boton_buscar">
-              <img src="img/Iconeicono_busqueda.svg" alt="" class="logo_buscar_2">
-            </label>
-            <button id="boton_busqueda" class="boton_buscar"></button>
+            <input type="image" name="" id="" src="img/Iconeicono_busqueda.svg" class="logo_buscar_2">
           </div>
           
-          <a href="#busqueda" class="busqueda_responsive">
-            <img src="img/Icone.svg" alt="Icono de Buscar" class="logo_buscar">
-          </a>
+          <div class="busqueda_responsive">
+            <input type="text" class="input_responsive" autocomplete="off" onkeypress="pulsar(event)">
+          </div>
         </div>
       </ul>
       <div class="img_portada">
@@ -117,8 +118,38 @@
       <p class="texto_footer">Desarrollado por Tolaba Leonardo - 2021</p>
     </div>
   </footer>  
-  <script src="js/principal.js"></script>
+  <script type="module" src="js/principal.js"></script>
   <script type="module" src="js/Productos_principales.js"></script>
   <script type="module" src="js/funcion_buscar.js"></script>
 </body>
 </html>
+
+
+<!-- <div>
+  <input type="text" placeholder="buscar" required>
+  <div class="btn">
+
+  </div>
+</div> -->
+
+<!-- .buscar{
+  position: absolute;
+  padding: 5px
+}
+.buscar input{
+  width: 0px; PASA A VALER 0, ANTES ERA 240
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px
+  transition: all 0.6s ease;
+}
+buscar:hover input{
+width 240px
+}
+buscar input:focus{
+  width 240px
+  } -->

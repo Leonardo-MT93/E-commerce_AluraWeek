@@ -1,26 +1,29 @@
-let usuarioLogueado = false;
-const iniciarSesion = document.querySelector('.boton_login_ppal');
-iniciarSesion.addEventListener('click', (evento) => {
+import { funcionesTarjeta } from "./controladores.js";
+
+const usuarioLogueado = 'on';
+const formulario = document.querySelector('.formulario_login');
+
+formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
-    const validUser = "leonino@alura.com"
-    const validPass = "Alura2022**"
-    const user = document.querySelector('.input_login').value;
+   const user = document.querySelector('.input_login').value;
     const pass = document.querySelector('#contraseña').value;
-    let control = false;
-    if(validUser == user && validPass == pass){
-        alert('Inicio de sesion Exitoso');
-        control = true;
-        window.location.href = ('../index.html'); 
-    }else{
-        alert('Usuario o contraseña incorrectos. Reingrese usuario y contraseña')
-    }
-       
-    
-    
+    funcionesTarjeta.CheckUser().then((respuesta)=> {
+        if(respuesta.Status == 'on'){
+            alert('USUARIO YA LOGUEADO')
+        }else{
+            if(user == respuesta.User && pass == respuesta.Pass){
+                funcionesTarjeta.UpdateSession(user, pass, usuarioLogueado).then((respuesta)=> {
+                    window.location.href = "index.html"
+                });
+                
+            }else{
+                alert('Usuario o contraseña incorrectos. Reingrese usuario y contraseña')
+            }
+        }
+    })    
 })
-if(control){
-    usuarioLogueado = true;
-}
+
+
 
 
 

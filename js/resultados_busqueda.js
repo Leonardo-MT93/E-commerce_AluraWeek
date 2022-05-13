@@ -1,4 +1,8 @@
 import { funcionesTarjeta } from "./controladores.js";
+import { Session } from "../session/check_session.js";
+
+Session.comprobarUser();
+Session.redireccionamiento();
 const textoError = document.querySelector('.texto_todos_productos');
 funcionesTarjeta.listaBusqueda().then((resultado) => {
     console.log(resultado);

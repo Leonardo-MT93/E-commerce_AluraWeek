@@ -1,4 +1,7 @@
 import { funcionesTarjeta } from "./controladores.js";
+import { Session } from "../session/check_session.js";
+
+Session.comprobarUser();
 const formulario = document.querySelector('.formulario_agregar');
 let imagenDragAndDrop = false;
 const imagenDefault = "http://127.0.0.1:5500/img/imagenDefault.svg";
@@ -52,10 +55,15 @@ if(id === null){
 })
 function reemplazarDesc(imagen, nombre, precio, descripcion){
     const imagenDesc = document.querySelector('.imagen_responsive');
+    const imagenMobile = document.querySelector('.insertar_archivo');
     const nombreDesc = document.querySelector('#newProduct');
     const precioDesc = document.querySelector('#newPrice');
     const Desc = document.querySelector('#descripcion_producto');
-    imagenDesc.src = imagen;
+    if(screen.width<600){
+        imagenMobile.src = imagen;
+    }else{
+        imagenDesc.src = imagen;
+    }
     nombreDesc.value = nombre;
     precioDesc.value = precio;
     Desc.innerHTML = descripcion;

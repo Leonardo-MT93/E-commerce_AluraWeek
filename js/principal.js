@@ -1,33 +1,29 @@
-const redireccionarLogin = document.querySelector('.boton_login');
-redireccionarLogin.addEventListener('click', (evento) => {
-    window.location.href = ('./login.html');
-});
+import { Session } from "../session/check_session.js";
 
-const redireccionarProductos = document.querySelector('.boton_login');
-redireccionarLogin.addEventListener('click', (evento) => {
-    window.location.href = ('./login.html');
-});
+Session.comprobarUser();
 
-
-
+Session.redireccionamiento();
+const redireccionarBotonConsolas = document.querySelector('.boton_portada');
+        redireccionarBotonConsolas.addEventListener('click', (evento) => {
+            window.location.href = ('#consolas');
+    });
 //DIRECCIONAMIENTO VALIDO SOLO PARA INDEX.HTML
 
-const redireccionarBotonConsolas = document.querySelector('.boton_portada');
-redireccionarBotonConsolas.addEventListener('click', (evento) => {
-    window.location.href = ('#consolas');
-});
+
 
 const mensajesIniciales = document.querySelectorAll('span');
 mensajesIniciales.forEach((span) => {
     span.innerHTML = "";
 });
 
-const input = document.querySelectorAll('input');
-input.forEach((input) => {
-    input.addEventListener('blur', (input) => {
-        validar(input.target);
-    })
+
+const input = document.querySelector('.input_nombre');
+input.addEventListener('blur', (input) => {
+    validar(input.target);
 })
+
+
+
 const areaTexto = document.querySelector('textarea');
 areaTexto.addEventListener('blur', (areaTexto) => {
     validar(areaTexto.target);

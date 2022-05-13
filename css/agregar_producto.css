@@ -155,7 +155,7 @@
         display: flex;  
         align-items: center;     
     }
-    .boton_buscar{
+    .boton_buscar_2{
         display: flex;
         visibility: visible;
         width: 250px;
@@ -257,7 +257,7 @@
         display: flex;  
         align-items: center;     
     }
-    .boton_buscar{
+    .boton_buscar_2{
         display: flex;
         visibility: visible;
         width: 250px;

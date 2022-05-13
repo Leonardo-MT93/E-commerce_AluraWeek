@@ -42,6 +42,19 @@ const eliminarBusqueda = (id) => {
         method: "DELETE"
     });
 }
+const CheckUser = () => fetch('https://aluraweek.herokuapp.com/user').then(response => response.json());
+const UpdateSession = (User, Pass, Status) => {    
+    return fetch('https://aluraweek.herokuapp.com/user', {
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({User, Pass, Status})
+})
+    .then( respuesta => console.log(respuesta))
+    .catch( error => console.log(error))
+}
+
 
 
  export const funcionesTarjeta = {
@@ -52,5 +65,7 @@ const eliminarBusqueda = (id) => {
     actualizarTarjeta,
     resultadoBusqueda,
     listaBusqueda,
-    eliminarBusqueda
+    eliminarBusqueda,
+    CheckUser,
+    UpdateSession,
 } 
