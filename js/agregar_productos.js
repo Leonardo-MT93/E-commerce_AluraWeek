@@ -146,9 +146,6 @@ function cargarImagen(file){
 }
 
 
-
-
-
 // -------------------------------- VALIDACIONES --------------------------------------------
 const spanInicial = document.querySelectorAll('span');
 spanInicial.forEach((span) => {

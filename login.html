@@ -24,10 +24,13 @@
         <img src="img/Logologo_desktop.svg" alt="Logo AluraWeek" class="logo_aluraweek_desktop">
         <div class="invertir_orden">
         <button class="boton_login">Login</button>
-        <input type="search" class="barra_busqueda" id="busqueda" placeholder="¿Que desea buscar?" data-tipo="busqueda">
-        <a href="#busqueda" class="busqueda_responsive">
-            <img src="img/Icone.svg" alt="Icono de Buscar" class="logo_buscar">
-        </a>
+        <div class="contenedor_busqueda">
+            <input type="search" class="barra_busqueda" id="busqueda" placeholder="¿Que desea buscar?">
+            <input type="image" name="" id="" src="img/Iconeicono_busqueda.svg" class="logo_buscar_2">
+          </div>
+          <div class="busqueda_responsive">
+            <input type="text" class="input_responsive" autocomplete="off" >
+          </div>
         </div>
     </ul>
     </header>
@@ -74,5 +77,7 @@
     </div>
     </footer>  
     <script type="module" src="js/validacion_login.js"></script>
+    <script src="js/boton_home.js"></script>
+    <script type="module" src="js/funcion_buscar.js"></script>
     </body>
     </html>

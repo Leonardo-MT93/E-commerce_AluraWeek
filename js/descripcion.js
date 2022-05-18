@@ -5,7 +5,7 @@ Session.comprobarUser();
 Session.redireccionamiento();
 const url = new URL (window.location);
 const id = url.searchParams.get("id");
-let contador = 0;
+let contadorX = 0;
 funcionesTarjeta.buscarTarjeta(id).then((profile) => {
     reemplazar(profile.Imagen, profile.Product, profile.Price, profile.Desc);
 })
@@ -38,10 +38,10 @@ funcionesTarjeta.buscarTarjeta(id).then((respuesta)=> {
         arraySeccion.forEach((objetos)=> {
             if(objetos.Seccion == respuesta.Seccion && id != objetos.id && screen.width>800){
                 crearEtiqueta(objetos);
-            }else if(objetos.Seccion == respuesta.Seccion && id != objetos.id && screen.width<800 && contador<4){
+            }else if(objetos.Seccion == respuesta.Seccion && id != objetos.id && screen.width<800 && contadorX<4){
                 crearEtiqueta(objetos);
-                contador++;
-                console.log(contador);
+                contadorX++;
+                console.log(contadorX);
             }
         })
     })
@@ -71,3 +71,4 @@ function crearEtiqueta(obj){
     prodIndividual.classList.add('producto_individual')
     ordenarProductos.appendChild(prodIndividual);
 }
+
